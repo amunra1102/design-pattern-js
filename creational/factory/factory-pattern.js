@@ -10,9 +10,9 @@ function VehicleFactory() {}
 VehicleFactory.prototype.vehicleClass = Car;
 
 // Our Factory method for creating new Vehicle instances
-VehicleFactory.prototype.createVehicle = function ( options ) {
+VehicleFactory.prototype.createVehicle = function (options) {
 
-  switch(options.vehicleType){
+  switch (options.vehicleType) {
     case "car":
       this.vehicleClass = Car;
       break;
@@ -22,8 +22,7 @@ VehicleFactory.prototype.createVehicle = function ( options ) {
     //defaults to VehicleFactory.prototype.vehicleClass (Car)
   }
 
-  return new this.vehicleClass( options );
-
+  return new this.vehicleClass(options);
 };
 
 module.exports = VehicleFactory;
